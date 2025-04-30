@@ -7,10 +7,12 @@ import Pricing from "@/pages/Pricing";
 import About from "@/pages/About";
 import Values from "@/pages/Values";
 import Footer from "@/pages/Footer";
+import { useThemeStore } from "@/stores/themeStore";
 
 export default function Home() {
+  const theme = useThemeStore((state) => state.theme);
   return (
-    <div className="min-h-screen bg-[#01052f] text-white">
+    <div className={`"min-h-screen bg-theme text-theme ${theme}`}>
       <Navigation />
       <Hero />
       <Features />

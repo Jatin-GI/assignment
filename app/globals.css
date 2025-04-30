@@ -120,3 +120,59 @@
     @apply bg-background text-foreground;
   }
 }
+/* Default :root already exists */
+.theme-organ {
+  --bg: #edf4f2; /* light green-gray */
+  --text: #1a2e28; /* dark teal-gray */
+  --primary: #157347; /* strong jade green */
+  --accent: #a7d9c4;
+  --max: #1a2e28; /* light mint green */
+  --font-head: "Merriweather", serif;
+  --font-body: "Inter", sans-serif;
+}
+.theme-cosmetic {
+  --bg: #fef6f7; /* blush white */
+  --text: #2e2e2e; /* dark charcoal */
+  --primary: #b45d6c; /* deeper rose mauve */
+  --accent: #ffdfe4;
+  --max: #2e2e2e; /* pale pink-peach */
+  --font-head: "Playfair Display", serif;
+  --font-body: "Poppins", sans-serif;
+}
+.theme-ai {
+  --bg: #f4f9fb; /* Soft light background, soothing light blue-gray */
+  --text: #2d3748; /* Dark gray text for readability */
+  --primary: #007bff; /* Professional, trustworthy blue */
+  --accent: #74a4ff; /* Vibrant medical green for action items */
+  --font-head: "Roboto", sans-serif; /* Clean and modern font for headings */
+  --font-body: "Lato", sans-serif; /* Clear, readable body font */
+}
+@layer utilities {
+  .bg-theme {
+    background-color: var(--bg);
+  }
+
+  .text-theme {
+    color: var(--text);
+  }
+
+  .font-head {
+    font-family: var(--font-head);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .btn-theme {
+    @apply px-6 py-2 rounded-md font-semibold transition-transform;
+    background-color: var(--primary);
+    color: var(--text);
+  }
+
+  .card-theme {
+    @apply p-4 rounded-lg shadow-md;
+    background-color: var(--accent);
+    color: var(--text);
+  }
+}
